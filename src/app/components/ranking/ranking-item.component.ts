@@ -18,6 +18,7 @@ import { Component, input } from '@angular/core';
       background-color: white;
       padding: 8px 8px;
       gap: 12px;
+      border: solid 2px black;
     }
 
     .rank, .accuracy {
