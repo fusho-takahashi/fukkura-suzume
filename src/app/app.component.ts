@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { ranking } from '../data/data';
 import { RankingComponent } from './components/ranking/ranking.component';
 import { RankingItem } from '../domain/models';
+import { ResultListComponent } from './components/ranking/result-list.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RankingComponent],
+  imports: [RouterOutlet, RankingComponent, ResultListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
