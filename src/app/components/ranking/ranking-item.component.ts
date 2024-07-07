@@ -4,12 +4,15 @@ import { Component, input } from '@angular/core';
   selector: 'app-ranking-item',
   standalone: true,
   template: ` <div class="rank rank-{{ rank() }}">
-      <span><span class="prefix">No.</span>{{ rank() }}</span>
+      <span
+        ><span class="no">{{ rank() }}</span
+        ><span class="unit">位</span></span
+      >
     </div>
     <div class="name">{{ name() }}</div>
     <div class="accuracy">
       <div class="accuracy-label">正解率</div>
-      <div>{{ accuracy() }}<span class="unit">%</span></div>
+      <div class="rate">{{ accuracy() }}<span class="unit">%</span></div>
     </div>`,
   styles: `
     :host {
@@ -21,7 +24,7 @@ import { Component, input } from '@angular/core';
       border: solid 2px black;
     }
 
-    .rank, .accuracy {
+    .rank .no, .accuracy .rate {
       font-family: "Peralta";
     }
 
@@ -54,7 +57,6 @@ import { Component, input } from '@angular/core';
 
     .name {
       flex: 1;
-      font-family: 'Mochiy Pop One';
       font-size: 28px;
     }
 
@@ -66,7 +68,6 @@ import { Component, input } from '@angular/core';
     }
 
     .accuracy-label {
-      font-family: 'Mochiy Pop One';
       font-size: 12px;
       line-height: 1;
     }
