@@ -1,7 +1,7 @@
 :host {
   max-width: 840px;
   margin: 0 auto;
-  padding: 32px 16px 0;
+  padding: 32px 0 0;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -30,7 +30,21 @@ h1 {
 }
 
 main {
+  padding: 0 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+footer {
+  background-color: #fec803;
+  padding: 16px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  p {
+    margin: unset;
+  }
 }
