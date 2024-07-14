@@ -7,8 +7,8 @@
     "build": "ng build && bun run process",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:fukkura-suzume": "node dist/server/server.mjs",
-    "process": "node ./tools/copy-files.mjs && node ./tools/alter-polyfills.mjs",
+    "serve:ssr:fukkura-suzume": "bun dist/server/server.mjs",
+    "process": "bun ./tools/copy-files.mjs && bun ./tools/alter-polyfills.mjs",
     "deploy": "bun run build && wrangler pages deploy dist/cloudflare"
   },
   "private": true,
@@ -40,11 +40,5 @@
     "@types/node": "^18.18.0",
     "typescript": "~5.4.2",
     "wrangler": "^0.0.0-c6c083f3"
-  },
-  "browser": {
-    "fs": "node:fs",
-    "fs/promises": "node:fs/promises",
-    "path": "node:path",
-    "url": "node:url"  
   }
 }
