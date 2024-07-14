@@ -40,5 +40,11 @@
     "@types/node": "^18.18.0",
     "typescript": "~5.4.2",
     "wrangler": "^0.0.0-c6c083f3"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "url": false,
+    "fs/promises": false
   }
 }
