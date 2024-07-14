@@ -43,7 +43,7 @@
   },
   "browser": {
     "fs": false,
-    "fs/promise": false,
+    "fs/promises": false,
     "path": false,
     "url": false  
   }
