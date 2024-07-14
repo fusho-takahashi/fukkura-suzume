@@ -42,9 +42,9 @@
     "wrangler": "^0.0.0-c6c083f3"
   },
   "browser": {
-    "fs": false,
-    "fs/promises": false,
-    "path": false,
-    "url": false  
+    "fs": "node:fs",
+    "fs/promises": "node:fs/promises",
+    "path": "node:path",
+    "url": "node:url"  
   }
 }
