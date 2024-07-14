@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:fukkura-suzume": "node dist/server/server.mjs",
-    "process": "node ./tools/copy-files.mjs && node ./tools/alter-polyfills.mjs",
+    "process": "bun ./tools/copy-files.mjs && bun ./tools/alter-polyfills.mjs",
     "deploy": "bun run build && wrangler pages deploy dist/cloudflare"
   },
   "private": true,
