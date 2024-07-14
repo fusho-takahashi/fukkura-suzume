@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "bun run build && wrangler pages dev dist/cloudflare --compatibility-date=2024-07-01 --experimental-local",
-    "build": "ng build && bun run process",
+    "build": "bunx ng build && bun run process",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:fukkura-suzume": "bun dist/server/server.mjs",
@@ -40,11 +40,5 @@
     "@types/node": "^18.18.0",
     "typescript": "~5.4.2",
     "wrangler": "^0.0.0-c6c083f3"
-  },
-  "browser": {
-    "fs": false,
-    "path": false,
-    "url": false,
-    "fs/promises": false
   }
 }
