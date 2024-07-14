@@ -4,11 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "bun run build && wrangler pages dev dist/cloudflare --compatibility-date=2024-07-01 --experimental-local",
-    "build": "ng build && bun run process",
+    "build": "bunx ng build && bun run process",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:fukkura-suzume": "node dist/server/server.mjs",
-    "process": "node ./tools/copy-files.mjs && node ./tools/alter-polyfills.mjs",
+    "serve:ssr:fukkura-suzume": "bun dist/server/server.mjs",
+    "process": "bun ./tools/copy-files.mjs && bun ./tools/alter-polyfills.mjs",
     "deploy": "bun run build && wrangler pages deploy dist/cloudflare"
   },
   "private": true,
